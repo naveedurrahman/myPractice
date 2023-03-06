@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MYSITE</title>
+        <link rel="icon" href="images/favicon.png">
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <section>
+            <article>
+                <label>First Value: </label><input type="number" id="val1"><br>
+                <label>Second Value: </label><input type="number" id="val2"><br>
+                <label>Result: </label><input type="number" id="result"><br>
+                <button onclick="sumit()">SUM</button>
+            </article>
+        </section>
+        <aside>
+
+        </aside>
+        <footer>
+            
+        </footer>
+    </body>
+    <script>
+        function sumit()
+        {
+            var num1 = document.getElementById("val1").value;
+            var num2 = document.getElementById("val2").value;
+
+            var calc = Number(num1) + Number(num2);
+            document.getElementById("result").value = calc;
+        }
+    </script>
+</html>

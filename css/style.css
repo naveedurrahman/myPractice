@@ -1,0 +1,8 @@
+* {padding: 0px; margin: 0px;}
+            header {height: 100px; width: 100%; background: tomato;}
+            section {min-height: 400px; width: 80%; background: gold; float: left;}
+            aside {height: 400px; width: 20%; background: skyblue; float: right;}
+            footer {height: 50px; width: 100%; background: gray; clear: both;}
+            article {min-height: 50px; width: 200px; margin-top: 20px;}
+            #first {background: pink;}
+            #second {background: lime;}

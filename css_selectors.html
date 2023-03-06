@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MYSITE</title>
+        <link rel="icon" href="images/favicon.png">
+        <style>
+            #main p {font-family: calibri; font-size: 15px;}
+            #main > p {background: gold; color: red;}
+            #main + p {background: green; color: white;}
+            h4 ~ p {background: skyblue; color: white;}
+
+            #list1 {list-style: none;}
+            #list1 li:before {content: '+ '; font-weight: bold;}
+
+            #list2 {list-style: none;}
+            #list2 li {background: lime; margin-top: 5px; width: 200px; text-align: center; color: darkgreen;}
+            #list2 li:hover {background: darkgreen; color: lime;}
+
+            #list3 {list-style: none;}
+            #list3 li:first-child {background: pink;}
+            #list3 li:last-child {background: orange;}
+            #list3 li:nth-child(5) {background: skyblue;}
+
+            #list4 {list-style: none;}
+            #list4 li:nth-child(odd) {background: black; color: white;}                
+            #list4 li:nth-child(even) {background: gray; color: black;}
+            
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <section>
+            <article>
+                <ul id="list1">
+                    <li>Computer</li>
+                    <li>Tablet</li>
+                    <li>Smartphone</li>
+                    <li>SmartWatch</li>
+                    <li>iPOD</li>
+                    <li>VR</li>
+                    <li>MS Slate</li>
+                    <li>DigiCAM</li>
+                </ul>
+                <ul id="list2">
+                    <li>Computer</li>
+                    <li>Tablet</li>
+                    <li>Smartphone</li>
+                    <li>SmartWatch</li>
+                    <li>iPOD</li>
+                    <li>VR</li>
+                    <li>MS Slate</li>
+                    <li>DigiCAM</li>
+                </ul>
+                <ul id="list3">
+                    <li>Computer</li>
+                    <li>Tablet</li>
+                    <li>Smartphone</li>
+                    <li>SmartWatch</li>
+                    <li>iPOD</li>
+                    <li>VR</li>
+                    <li>MS Slate</li>
+                    <li>DigiCAM</li>
+                </ul>
+                <ul id="list4">
+                    <li>Computer</li>
+                    <li>Tablet</li>
+                    <li>Smartphone</li>
+                    <li>SmartWatch</li>
+                    <li>iPOD</li>
+                    <li>VR</li>
+                    <li>MS Slate</li>
+                    <li>DigiCAM</li>
+                </ul>
+            </article>
+            <article>
+                <div id="main">
+                    <p> First Direct Paragraph of the Page</p>
+                    <p> Second Direct Paragraph of the Page</p>
+                    <p> Third Direct Paragraph of the Page</p>
+                    <div id="sub">
+                        <p> First Nested Child Paragraph </p>
+                        <p> Second Nested Child Paragraph </p>
+                        <p> Third Nested Child Paragraph </p>
+                    </div>
+                </div>
+                <p> First External Paragraph of the Page </p>
+                <p> Second External Paragraph of the Page </p>
+                <p> Third External Paragraph of the Page </p>
+            </article>
+        </section>
+        <aside>
+            <p> First Paragraph inside Sidebar</p> 
+            <p> Second Paragraph inside Sidebar</p> 
+            <p> Third Paragraph inside Sidebar</p> 
+        </aside>
+        <footer>
+            <p> First Leading Paragraph in Footer</p>
+            <p> Second Leading Paragraph in Footer</p>
+
+            <h4> First Heading of the Footer </h4>
+
+            <p> First Paragraph after Heading in Footer </p>
+            <p> Second Paragraph after Heading in Footer </p>
+            <p> Third Paragraph after Heading in Footer </p>
+            <p> Fourth Paragraph after Heading in Footer </p>
+        </footer>
+    </body>
+</html>

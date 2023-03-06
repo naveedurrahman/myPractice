@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MYSITE</title>
+        <link rel="icon" href="images/favicon.png">
+        <style>
+            article {height: 600px; width: 100%; background: #e5e5e5; text-align: center;}
+            #big {height: 330px; width: 500px;}
+            #small {height: 200px; width: 100%; background: #d5d5d5;}
+            #small video {height: 160px; width: 230px; border: 2px solid red; margin-top: 20px; margin-left: 5px; transition: all 0.3s linear;}
+            #small video:hover {transform: scale(1.1);}
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <section>
+            <article>
+                <video controls id="big">
+                    <source src="videos/vid1.mp4">
+                </video>
+                <h2 id="txt1">Video1 of the Gallery</h2>
+                <div id="small">
+                    <video title="Video1 of the Gallery" onclick="changevid(this)">
+                        <source src="videos/vid1.mp4">
+                    </video>
+                    <video title="Video2 of the Gallery" onclick="changevid(this)">
+                        <source src="videos/vid2.mp4">
+                    </video>
+                    <video title="Video3 of the Gallery" onclick="changevid(this)">
+                        <source src="videos/vid1.mp4">
+                    </video>
+                    <video title="Video4 of the Gallery" onclick="changevid(this)">
+                        <source src="videos/vid2.mp4">
+                    </video>
+                    <video title="Video5 of the Gallery" onclick="changevid(this)">
+                        <source src="videos/vid1.mp4">
+                    </video>
+                    
+                </div>
+            </article>
+        </section>
+        <aside>
+
+        </aside>
+        <footer>
+            
+        </footer>
+        <script>
+            function changevid(uservideo)
+            {
+                var newVideo = uservideo.getElementsByTagName("source")[0].src;
+                document.getElementById("big").pause();
+                document.getElementById("big").getElementsByTagName("source")[0].src = newVideo;
+                document.getElementById("big").load();
+                document.getElementById("big").play();
+
+                var newText = uservideo.title;
+                document.getElementById("txt1").innerHTML = newText;
+            }
+        </script>>
+    </body>
+</html>

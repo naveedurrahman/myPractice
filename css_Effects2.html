@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html>
+    <head> 
+        <style>
+            #box1 {height: 200px; width: 200px; border: 2px solid red; overflow: hidden;}
+            #layer1 {height: 200px; width: 200px; background: red; text-align: center; line-height: 200px; font-size: 2em; font-family: arial black; color: white; transition: all 0.5s linear;}
+            #layer2 {height: 200px; width: 200px; background: green; text-align: center; line-height: 200px; font-size: 2em; font-family: arial black; color: white; }
+            #box1:hover #layer1 {margin-top: -200px;}
+            
+            .b2height {height: 200px; width: 200px; }
+            .box2 {bo rder: 2px solid red; overflow: hidden;}
+            .tunnel {height: 200px; width: 400px; bor der: 2px solid green;}
+            .paper1 {background: red; text-align: center; line-height: 200px; font-size: 2em; font-family: arial black; color: white; transition: all 0.5s linear; float: left;}
+            .paper2 {background: green; text-align: center; line-height: 200px; font-size: 2em; font-family: arial black; color: white; float: left;}
+            .box2:hover .paper1 {margin-left: -200px;}
+
+            #box3 {height: 200px; width:200px; border: 2px solid red; overflow: hidden;}
+            #box3 img {height: 200px; width: 200px; transition: all 0.5s linear;}
+            #box3:hover img{transform: scale(2);}
+        </style>
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <section>
+            <article>
+                <div id="box1">
+                    <div id="layer1">LAYER1</div>
+                    <div id="layer2">LAYER2</div>
+                </div>
+                <br><br><br>
+                <div class="box2 b2height">
+                    <div class="tunnel">
+                        <div class="paper1 b2height">LAYER1</div>
+                        <div class="paper2 b2height">LAYER2</div>
+                    </div>
+                </div>
+                <div id="box3">
+                    <img src="images/salman.jpg">
+                </div>
+            </article>
+        </section>
+        <aside>
+
+        </aside>
+        <footer>
+
+        </footer>
+    </body>
+</html>

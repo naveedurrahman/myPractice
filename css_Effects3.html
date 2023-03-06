@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MYSITE</title>
+        <link rel="icon" href="images/favicon.png">
+        <style>
+            #box1 {height: 200px; width: 200px; border: 2px solid red; position: relative; overflow: hidden;}
+            #box1 img {height: 200px; width: 200px; }
+            #layer1 {height: 200px; width: 200px; background: red; position: absolute; transition: all 1s linear; top: 200px; opacity: 0.5;}
+            #box1:hover #layer1 {top: 0px;}
+
+            #box2 {height: 200px; width: 200px; border: 2px solid red; position: relative; overflow: hidden;}
+            #box2 img {height: 200px; width: 200px; }
+            #layer2 {height: 50px; width: 200px; background: green; position: absolute; transition: all 1s linear; top: 200px; opacity: 0.5;}
+            #box2:hover #layer2 {top: 100px;}
+
+            #box3 {height: 200px; width: 200px; border: 2px solid red; position: relative; overflow: hidden;}
+            #box3 img {height: 200px; width: 200px; }
+            #layer3 {height: 50px; width: 200px; background: gold; position: absolute; transition: all .3s linear; top: 150px; opacity: 0;}
+            #box3:hover #layer3 {top: 100px; opacity: 1;}
+
+            #box4 {height: 200px; width: 200px; border: 2px solid red; position: relative; overflow: hidden;}
+            #box4 img {height: 200px; width: 200px; }
+            #layer4 {height: 200px; width: 50px; background: black; position: absolute; transition: all .3s linear; top: 0px; left: 175px; transform-origin: bottom; opacity: 0;}
+            #box4:hover #layer4 {transform: rotate(-90deg); opacity: 1; }
+        
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <section>
+            <article>
+                <div id="box1">
+                    <img src="images/salman.jpg">
+                    <div id="layer1"></div>
+                </div>
+                <div id="box2">
+                    <img src="images/hrithik.jpg">
+                    <div id="layer2"></div>
+                </div>
+                <div id="box3">
+                    <img src="images/vidyut.jpg">
+                    <div id="layer3"></div>
+                </div>
+                <div id="box4">
+                    <img src="images/tiger.jpg">
+                    <div id="layer4"></div>
+                </div>
+            </article>
+        </section>
+        <aside>
+
+        </aside>
+        <footer>
+            
+        </footer>
+    </body>
+</html>

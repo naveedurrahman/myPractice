@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MYSITE</title>
+        <link rel="icon" href="images/favicon.png">
+        <style>
+            * {padding: 0px; margin: 0px;}
+            #main {height: 400px; width: 100%; background: #f9f9f9; border: 2px solid red;}
+            #sub {height: 350px; width: 300px; background: lightgray; margin-top: 25px; margin-left: 20px; text-align: center; position: relative; z-index: 1; overflow: hidden; float: left;}
+            #sub img {height: 350px; width: 300px; position: absolute; top: 0px; left: 0px; z-index: 2; transition: all 0.3s linear;}
+            #data {height: 350px; width: 300px; z-index: 3; position: absolute; }
+            #layer {height: 350px; width: 300px; z-index: 3; background: blue; position: absolute; opacity: 0.5;}
+            #sub p {width: 70px; height: 70px; background: red; border-radius: 50%; text-align: center; line-height: 70px; font-family: arial black; font-size: 2em; color: white; margin-top: 80px; margin-left: 130px;}
+            #sub h2 {font-family: verdana; font-size: 2em; margin-top: 20px;}
+            #sub a {text-decoration: none; font-family: candara; font-size: 15px; color: white; margin-top: 50px; display: block;}
+
+            #sub:hover img {transform: scale(1.1);}
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <section>
+            <article>
+                <div id="main">
+                    <div id="sub">
+                        <img src="images/hrithik.jpg">
+                        <div id="layer"></div>
+                        <div id="data">
+                            <p>&</p>
+                            <h2>Heading 1</h2>
+                            <a href="">MORE</a>
+                        </div>
+                    </div>
+                    <div id="sub">
+                        <img src="images/hrithik.jpg">
+                        <div id="layer"></div>
+                        <div id="data">
+                            <p>$</p>
+                            <h2>Heading 2</h2>
+                            <a href="">MORE</a>
+                        </div>
+                    </div>
+                    <div id="sub">
+                        <img src="images/hrithik.jpg">
+                        <div id="layer"></div>
+                        <div id="data">
+                            <p>@</p>
+                            <h2>Heading 3</h2>
+                            <a href="">MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <aside>
+
+        </aside>
+        <footer>
+            
+        </footer>
+    </body>
+</html>

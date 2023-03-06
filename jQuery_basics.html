@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MYSITE</title>
+        <link rel="icon" href="images/favicon.png">
+        <style>
+            #box1 {height: 200px; width: 200px; background: orange;}
+            #box2 {height: 200px; width: 200px; background: pink;}
+            #box3 {height: 200px; width: 200px; background: skyblue;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <section>
+            <article>
+                <button id="btn1">HIDE</button><button id="btn2">SHOW</button><button id="btn3">HIDE/SHOW</button>
+                <div id="box1"></div>
+            </article>
+            <article>
+                <button id="btn4">SLIDEUP</button><button id="btn5">SLIDEDOWN</button><button id="btn6">SLIDE UP/DOWN</button>
+                <div id="box2"></div>
+            </article>
+            <article>
+                <button id="btn7">FADEOUT</button><button id="btn8">FADEIN</button><button id="btn9">FADE IN/OUT</button>
+                <div id="box3"></div>
+            </article>
+        </section>
+        <aside>
+
+        </aside>
+        <footer>
+            
+        </footer>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#box1").hide("slow");
+            });
+            $("#btn2").click(function(){
+                $("#box1").show();
+            });
+            $("#btn3").click(function(){
+                $("#box1").toggle();
+            });
+
+            $("#btn4").click(function(){
+                $("#box2").slideUp();
+            });
+            $("#btn5").click(function(){
+                $("#box2").slideDown();
+            });
+            $("#btn6").click(function(){
+                $("#box2").slideToggle();
+            });
+
+            $("#btn7").click(function(){
+                $("#box3").fadeOut();
+            });
+            $("#btn8").click(function(){
+                $("#box3").fadeIn();
+            });
+            $("#btn9").click(function(){
+                $("#box3").fadeToggle();
+            });
+        });
+    </script>
+</html>

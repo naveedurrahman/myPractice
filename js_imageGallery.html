@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MYSITE</title>
+        <link rel="icon" href="images/favicon.png">
+        <style>
+            article {height: 600px; width: 100%; background: #e5e5e5; text-align: center;}
+            #big {height: 330px; width: 500px;}
+            #small {height: 200px; width: 100%; background: #d5d5d5;}
+            #small img {height: 160px; width: 230px; border: 2px solid red; margin-top: 20px; margin-left: 5px; transition: all 0.3s linear;}
+            #small img:hover {transform: scale(1.1);}
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <section>
+            <article>
+                <img src="images/shahrukh.jpg" id="big">
+                <h2 id="txt1">Actor: Shah Rukh Khan</h2>
+                <div id="small">
+                    <img src="images/shahrukh.jpg" alt="Actor: Shah Rukh Khan" onclick="changepic(this)">
+                    <img src="images/salman.jpg" alt="Actor: Salman Khan" onclick="changepic(this)">
+                    <img src="images/vidyut.jpg" alt="Actor: Vidyut Jamwal" onclick="changepic(this)">
+                    <img src="images/tiger.jpg" alt="Actor: Tiger Shroff" onclick="changepic(this)">
+                    <img src="images/hrithik.jpg" alt="Actor: Hrithik Roshan" onclick="changepic(this)">
+                </div>
+            </article>
+        </section>
+        <aside>
+
+        </aside>
+        <footer>
+            
+        </footer>
+        <script>
+            function changepic(userimage)
+            {
+                //alert("WORKING");
+                //alert(userimage.src);
+                var newImage = userimage.src;
+                var newText = userimage.alt;
+                document.getElementById("big").src = newImage;
+                document.getElementById("txt1").innerHTML = newText;
+            }
+        </script>>
+    </body>
+</html>

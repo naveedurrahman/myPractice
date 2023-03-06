@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example of Clean and Simple jQuery Slideshow Plugin</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+img, div {
+behavior: url(iepng/iepngfix.htc);
+}
+</style>
+<script type="text/javascript" src="iepng/iepngfix_tilebg.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="http://www.jqueryscript.net/text/jQuery-Plugin-For-Animated-3D-Text-Shadow-Effect.html">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<center>
+<h2 style="margin-top:150px;">Example of Clean and Simple jQuery Slideshow Plugin<br />
+</h2>
+</center>
+<div id="box">
+<ul class="big_img">
+<li><a href="http://www.jq-school.com"><img src="img/2.jpg" alt=""/></a></li>
+<li><a href="http://www.jq-school.com"><img src="img/3.jpg" alt=""/></a></li>
+<li><a href="http://www.jq-school.com"><img src="img/big0020121113201926.jpg" alt=""/></a></li>
+<li><a href="http://www.jq-school.com"><img src="img/big0120120425202913.jpg" alt=""/></a></li>
+<li><a href="http://www.jq-school.com"><img src="img/big0220120423201353.jpg" alt=""/></a></li>
+<li><a href="http://www.jq-school.com"><img src="img/big0220120425203714.jpg" alt=""/></a></li>
+<li><a href="http://www.jq-school.com"><img src="img/big0320121112195755.jpg" alt=""/></a></li>
+<li><a href="http://www.jq-school.com"><img src="img/big0420121112210403.jpg" alt=""/></a></li>
+<li><a href="http://www.jq-school.com"><img src="img/big0520121113194658.jpg" alt=""/></a></li>
+<li><a href="http://www.jq-school.com"><img src="img/big0720121112195555.jpg" alt=""/></a></li>
+</ul>
+<ul class="slider_title">
+<li><a href="http://www.jq-school.com">Title 1</a></li>
+<li><a href="http://www.jq-school.com">Title 2</a></li>
+<li><a href="http://www.jq-school.com">Title 3</a></li>
+<li><a href="http://www.jq-school.com">Title 4</a></li>
+<li><a href="http://www.jq-school.com">Title 5</a></li>
+<li><a href="http://www.jq-school.com">Title 6</a></li>
+<li><a href="http://www.jq-school.com">Title 7</a></li>
+<li><a href="http://www.jq-school.com">Title 8</a></li>
+<li><a href="http://www.jq-school.com">Title 9</a></li>
+<li><a href="http://www.jq-school.com">Title 10</a></li>
+</ul>
+<ul class="slider_list">
+<li index='1' class="current"><a href="http://www.jq-school.com"><img src="img/small_2.jpg" alt="" /><span class="border"></span></a></li>
+<li index='2'><a href="http://www.jq-school.com"><img src="img/small_3.jpg" alt="" /><span class="border"></span></a></li>
+<li index='3'><a href="http://www.jq-school.com"><img src="img/small_0020121113201926.jpg" alt="" /><span class="border"></span></a></li>
+<li index='4'><a href="http://www.jq-school.com"><img src="img/small_0120120425202913.jpg" alt="" /><span class="border"></span></a></li>
+<li index='5'><a href="http://www.jq-school.com"><img src="img/small_0220120423201353.jpg" alt="" /><span class="border"></span></a></li>
+<li index='6'><a href="http://www.jq-school.com"><img src="img/small_0220120425203714.jpg" alt="" /><span class="border"></span></a></li>
+<li index='7'><a href="http://www.jq-school.com"><img src="img/small_0320121112195755.jpg" alt="" /><span class="border"></span></a></li>
+<li index='8'><a href="http://www.jq-school.com"><img src="img/small_0420121112210403.jpg" alt="" /><span class="border"></span></a></li>
+<li index='9'><a href="http://www.jq-school.com"><img src="img/small_0520121113194658.jpg" alt="" /><span class="border"></span></a></li>
+<li index='10'><a href="http://localhost" target="_blank"><img src="img/small_0720121112195555.jpg" alt="" /><span class="border"></span></a></li>
+</ul>
+</div>
+</body>
+<script type="text/javascript">
+/* 
+ * @name: 图片幻灯片特效
+ * @time: 2013/03/02
+ * @author: 网友晓天
+ * @url: http://www.jq-school.com/
+ * @directiona: 关注JquerySchool网站，支持原创
+*/
+
+var myTimer;
+var currentIndex = -1;	
+var $big = $('.big_img li');	
+var $title = $('.slider_title li');
+var $small = $('.slider_list li');	
+function show(){		
+	var next = currentIndex < ($big.length -1)? currentIndex+1:0;
+	showImg(next);
+}
+
+function showImg(index){			
+	$($big[index]).stop().fadeIn().siblings().stop().fadeOut();
+	$($title[index]).stop().show().siblings().stop().hide();
+	$($small[index]).addClass('current').siblings().removeClass('current');
+	currentIndex = index;
+}
+	
+$(function(){
+	myTimer = setInterval("show()",3000);
+
+	$big.hover(function(){clearInterval(myTimer);},function(){myTimer = setInterval("show()",3000);});
+
+	$small.hover(function(){
+		var index = $(this).attr('index');
+		clearInterval(myTimer);
+		showImg(index-1);
+	},function(){
+		myTimer = setInterval("show()",3000);
+	});
+	show();		
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MYSITE</title>
+        <link rel="icon" href="images/favicon.png">
+        <style>
+            #mylist {list-style: none; }
+            #mylist li {height: 50px; width: 150px; background: orange; text-align: center; line-height: 50px; margin-top: 5px; font-family: verdana; font-size: 17px; font-weight: bold; color: white;}
+            button {height: 50px; width: 100px; margin-left: 10px;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <section>
+            <article>
+                <ul id="mylist">
+                    <li>COMPUTER</li>
+                    <li>SMARTPHONE</li>
+                    <li>TABLET</li>
+                    <li>Virtual Reality</li>
+                    <li>Smart Watch</li>
+                    <li>iPOD</li>
+                    <li>Digital Camera</li>
+                    <li>Digital LED</li>
+                    <li>MS SLATE</li>
+                </ul>  
+                <button id="prev">PREV</button>       
+                <button id="next">NEXT</button>       
+            </article>
+        </section>
+        <aside>
+
+        </aside>
+        <footer>
+            
+        </footer>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#mylist li").hide();
+            var counter = 1;
+            
+            var item = $("#mylist li").first().show();
+
+            $("#next").click(function(){
+
+                if(counter>=9)
+                {
+                    $("#mylist li").hide();
+                    item = item.last().show();
+                    counter = $("#mylist li").length;
+                }
+                else
+                {
+                    $("#mylist li").hide();
+                    item = item.next().show();
+                    counter++;
+                }
+
+                
+            });            
+
+            $("#prev").click(function(){
+
+                if(counter==1)
+                {
+                    $("#mylist li").hide();
+                    item = item.first().show();
+                    counter=1;
+                }
+                else
+                {
+                    $("#mylist li").hide();
+                    item = item.prev().show();
+                    counter--;
+                }
+                
+            });
+
+        });
+    </script>
+</html>

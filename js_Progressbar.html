@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MYSITE</title>
+        <link rel="icon" href="images/favicon.png">
+        <style>
+            #box {height: 30px; width: 100%; border: 2px solid red;}
+            #bar {height: 30px; width: 1%; background: blue;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <section>
+            <article>
+                <button onclick="startit()">Start</button>
+                <div id="box">
+                    <div id="bar"></div>
+                </div>
+            </article>
+        </section>
+        <aside>
+
+        </aside>
+        <footer>
+            
+        </footer>
+    </body>
+    <script>
+        var width = 1;
+        function startit()
+        {
+            
+            var item = setInterval(myfun,100);
+            
+        }
+
+        function myfun()
+        {
+            if(width>=100)
+            {
+                clearInterval(item);
+            }
+            else
+            {
+                document.getElementById("bar").style.width = width+"%";
+                width++;
+            }
+        }
+    </script>
+</html>

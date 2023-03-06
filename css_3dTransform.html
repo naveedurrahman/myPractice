@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MYSITE</title>
+        <link rel="icon" href="images/favicon.png">
+        <style>
+            #box1 {height: 100px; width: 100px; background: orange; text-align: center; line-height: 100px; transition: all 0.5s linear;}
+            #box1:hover {transform: perspective(200px) rotateY(180deg);}
+            #box2 {height: 200px; width: 150px; border-top: 10px solid red; border-left: 10px solid red;border-right: 10px solid red;}
+            #door {height: 200px; width: 150px; background: brown; transition: all 1s linear; transform-origin: left;}
+            #box2:hover #door {transform:perspective(200px) rotateY(60deg);}
+
+            .main {height: 300px; width: 250px; border: 2px solid red; perspective: 500px; position: relative;}
+            .card {height: 300px; width: 250px; transform-style: preserve-3d; position: absolute; transition: all 1s linear;}
+            .back {height: 300px; width: 250px; background: red; color: white; text-align: center; line-height: 300px; font-family: arial black; font-size: 3em; position: absolute; transform: rotateY(180deg);}
+            .front {height: 300px; width: 250px; background: green; color: white; text-align: center; line-height: 300px; font-family: arial black; font-size: 3em; position: absolute; backface-visibility: hidden;}
+            .main:hover .card{transform: rotateY(180deg);}
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <section>
+            <article>
+                <div id="box1">ITSAWK</div>
+                <div id="box2">
+                    <div id="door"></div>
+                </div>
+                <div class="main">
+                    <div class="card">
+                        <div class="back">BACK</div>
+                        <div class="front">FRONT</div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <aside>
+
+        </aside>
+        <footer>
+            
+        </footer>
+    </body>
+</html>

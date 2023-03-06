@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MYSITE</title>
+        <link rel="icon" href="images/favicon.png">
+        <style>
+            #box1 {height: 100px; width: 100px; background: orange;}
+            .mystyle {font-family: corbel; font-size: 7em; background: linear-gradient(red,orange,blue); text-align: center; -webkit-text-fill-color: transparent; -webkit-background-clip: text; background-clip: text;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <section>
+            <article>
+                <button onclick="hideit()">HIDE</button>    
+                <button onclick="showit()">SHOW</button>
+                <button onclick="addit()">ADD TEXT</button>    
+                <button onclick="decorit()">DECORATE BOX</button>    
+                <div id="box1"></div>
+            </article>
+            <article>
+                <button onclick="fontit()">ADD FONT</button>
+                <h2 id="txt1">ITSAWK</h2>
+            </article>
+        </section>
+        <aside>
+
+        </aside>
+        <footer>
+            
+        </footer>
+    </body>
+    <script>
+        var item = document.getElementById("box1");
+        function hideit()
+        {
+            document.getElementById("box1").style.display = "none";
+        }
+        function showit()
+        {
+            document.getElementById("box1").style.display = "block";
+        }
+        function addit()
+        {
+            item.innerHTML = "ITSAWK";
+            item.style.textAlign = "center";
+            item.style.lineHeight = "100px";
+            item.style.color = "white";
+            item.style.fontFamily = "Arial Black";
+        }
+
+        function decorit()
+        {
+            item.style.marginLeft = "50px";
+            item.style.marginTop = "50px";
+            item.style.transform = "scale(2)";
+            item.style.transition = "all 0.5s linear";
+        }
+
+        function fontit()
+        {
+            document.getElementById("txt1").classList.add("mystyle");
+        }
+    </script>
+</html>

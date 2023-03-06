@@ -1,0 +1,74 @@
+<!DOCTYPE>
+<html>
+    <head> 
+        <style>
+            @keyframes animate1
+            {
+                from {background: crimson; margin-left: 0px;}
+                to {background: gold; margin-left: 500px;}
+            }
+            #box1 {height: 100px; width: 100px; background: crimson; animation-name: animate1; animation-iteration-count: 3; animation-duration: 1s;}
+            
+            @keyframes animate2
+            {
+                from {margin-left: 0px; transform: rotate(0deg);}
+                to {margin-left: 500px; transform: rotate(360deg);}
+            }
+            #box2 {height: 70px; width: 70px; border-radius: 50%; background: linear-gradient(red,yellow,green); animation-name: animate2; animation-iteration-count: 5; animation-duration: 4s; animation-delay: 2s;}
+            
+            @keyframes animate3
+            {
+                from {margin-left: 0px; transform: rotate(0deg);}
+                to {margin-left: 500px; transform: rotate(360deg);}
+            }
+            #box3 {height: 100px; width: 100px; border-radius: 50%; border: 10px dashed lime; background: linear-gradient(red,yellow,green); animation-name: animate3; animation-iteration-count: 5; animation-duration: 4s; animation-delay: 1s; animation-direction: alternate;}
+            
+            @keyframes animate4
+            {
+                from {width: 100px; background: skyblue;}
+                to {width: 600px; background: orange;}
+            }
+            #box4 {height: 100px; width: 100px; background: skyblue; animation-name: animate4; animation-iteration-count: 5; animation-duration: 2s; animation-delay: 1s; animation-direction: alternate;}
+
+            @keyframes animate5
+            {
+                0% {margin-left: 0px; margin-top: 0px; background: red;}
+                25% {margin-left: 250px; margin-top: 0px; background: gold;}
+                50% {margin-left: 250px; margin-top: 250px; background: green;}
+                75% {margin-left: 0px; margin-top: 250px; background: skyblue;}
+                100% {margin-left: 0px; margin-top: 0px; background: red;}
+            }
+            #main {height: 300px; width: 300px; border: 2px solid red;}
+            #sub {height: 50px; width: 50px; background: red; animation: animate5 3s infinite reverse;}
+
+            @keyframes txtani
+            {
+                from {color: red; text-shadow: 0px -5px 15px blue;}
+                to {color: yellow; text-shadow: 0px 5px 15px red;}
+            }
+            #txt1 {font-size: 7em; font-family: arial black; text-align: center; color: red; animation: txtani 0.1s infinite; }
+        </style>
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <section>
+            <div id="box1"></div>      
+            <div id="box2"></div>      
+            <div id="box3"></div>      
+            <div id="box4"></div>      
+
+            <div id="main">
+                <div id="sub"></div>
+            </div>
+            <h2 id="txt1">ITSAWK</h2>
+        </section>
+        <aside>
+
+        </aside>
+        <footer>
+            
+        </footer>
+    </body>
+</html>

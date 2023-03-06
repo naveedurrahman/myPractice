@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MYSITE</title>
+        <link rel="icon" href="images/favicon.png">
+        <style>
+            .red {padding: 15px; background: red; color: white; font-family: verdana;}
+            .yellow {padding: 15px; background: yellow; color: black; font-family: verdana; }
+            .green {padding: 15px; background: green; color: white; font-family: verdana;}
+
+            #box1 {height: 200px; width: 200px; border: 2px solid red;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <section>
+            <article>
+                <label>FULLNAME: </label><input type="text" id="full"><span id="rslt1"></span><br>
+                <label>USERNAME: </label><input type="text" id="user"><span id="rslt2"></span><br>
+                <label>PASSWORD: </label><input type="password" id="pass"><span id="rslt3"></span><br>
+            </article>
+        </section>
+        <aside>
+            <input type="color" id="clr">
+            <div id="box1">
+
+            </div>
+        </aside>
+        <footer>
+            <select id="fnt">
+                <option>Arial</option>
+                <option>Verdana</option>
+                <option>sans-serif</option>
+                <option>Times</option>
+                <option>Georgia</option>
+            </select>
+            <textarea id="txtarea">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi maxime at repellendus eveniet sequi necessitatibus magnam officia! Corrupti omnis excepturi necessitatibus ullam exercitationem modi dignissimos animi, harum recusandae magni laudantium eos sequi optio expedita dicta laboriosam quas perspiciatis. Porro deserunt odio quo sed provident cumque quae aspernatur amet pariatur consequuntur?</textarea>
+
+        </footer>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#full").keyup(function(){
+                var rec = $(this).val();
+                $("#rslt1").text(rec);
+            });
+
+            $("#user").keyup(function(){
+                var count = $(this).val().length;
+                $("#rslt2").text(count);
+            });
+
+            $("#pass").keyup(function(){
+                var counter = $(this).val().length;
+
+                if(counter>12)
+                {
+                    $("#rslt3").text("STRONG");
+                    $("#rslt3").addClass("green");
+                    $("#rslt3").removeClass("yellow");
+                    $("#rslt3").removeClass("red");
+
+                    // $("#rslt3").css("background","green");
+                    // $("#rslt3").css("color","white");
+                    // $("#rslt3").css("padding","15px");
+                }
+                else if(counter>8)
+                {
+                    $("#rslt3").text("NORMAL");
+                    $("#rslt3").addClass("yellow");
+                    $("#rslt3").removeClass("red");
+                    $("#rslt3").removeClass("green");
+                }
+                else
+                {
+                    $("#rslt3").text("WEAK");
+                    $("#rslt3").addClass("red");
+                    $("#rslt3").removeClass("yellow");
+                    $("#rslt3").removeClass("green");
+
+                }
+            });
+
+            $("input").focusin(function(){
+                $(this).css("background","gold");
+                $(this).css("color","red");
+            });
+            $("input").focusout(function(){
+                $(this).css("background","white");
+                $(this).css("color","black");
+            });
+
+            $("#clr").change(function(){
+                var mycolor = $(this).val();
+                $("#box1").css("background",mycolor);
+                $("label").css("color",mycolor);
+            });
+
+            $("#userclr").change(function(){
+                var ucolor = $(this).val();
+                $("body").css("background",ucolor);
+            });
+            $("#fnt").change(function(){
+                var family = $(this).val();
+                $("#txtarea").css("font-family",family);
+            });
+        });
+    </script>
+</html>

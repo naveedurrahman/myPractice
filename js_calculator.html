@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MYSITE</title>
+        <link rel="icon" href="images/favicon.png">
+        <style>
+            * {margin: 0px; padding: 0px;}
+            #calc {height: 300px; width: 300px; bor der: 2px solid red;}
+            #result {height: 50px; width: 100%; font-family: candara; font-size: 2em;}
+            #left {height: 250px; width: 70%; backgro und: pink; float: left;}
+            #left button {height: 50px; width: 70px; margin-left: -3px; margin-top: 3px;}
+            #right {height: 250px; width: 30%; backgr ound: lime; float: right;}
+            #right button {height: 50px; width: 100%; margin-top: 3px;}
+            button {font-family: verdana; font-size: 2em;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <section>
+            <article>
+                <div id="calc">
+                    <input type="number" id="result" readonly>
+                    <div id="left">
+                        <button onclick="showit(this)">1</button>
+                        <button onclick="showit(this)">2</button>
+                        <button onclick="showit(this)">3</button>
+                        <button onclick="showit(this)">4</button>
+                        <button onclick="showit(this)">5</button>
+                        <button onclick="showit(this)">6</button>
+                        <button onclick="showit(this)">7</button>
+                        <button onclick="showit(this)">8</button>
+                        <button onclick="showit(this)">9</button>
+                        <button onclick="showit(this)">0</button>
+                        <button style="width: 140px;" onclick="calc(this)">=</button>
+                    </div>
+                    <div id="right">
+                        <button onclick="midcalc(this)">+</button>
+                        <button onclick="midcalc(this)">-</button>
+                        <button onclick="midcalc(this)">*</button>
+                        <button onclick="midcalc(this)">/</button>
+                    </div>
+                </div>         
+            </article>
+        </section>
+        <aside>
+
+        </aside>
+        <footer>
+            
+        </footer>
+    </body>
+    <script>
+        var choice,num1,num2;
+
+        function showit(num)
+        {
+            document.getElementById("result").value += num.innerHTML;
+        }
+
+        function midcalc(oprtr)
+        {
+            choice = oprtr.innerHTML;
+            num1 = document.getElementById("result").value;
+            document.getElementById("result").value = "";
+        }
+
+        function calc()
+        {
+            num2 = document.getElementById("result").value;
+            document.getElementById("result").value = "";
+
+            switch(choice)
+            {
+                case '+':
+                    var tot = Number(num1) + Number(num2);
+                    break;
+                case '-':
+                    var tot = Number(num1) - Number(num2);
+                    break;
+                case '*':
+                    var tot = Number(num1) * Number(num2);
+                    break;
+                case '/':
+                    var tot = Number(num1) / Number(num2);
+                    break;
+            }
+            
+            document.getElementById("result").value = tot;
+        }
+
+    </script>
+</html>

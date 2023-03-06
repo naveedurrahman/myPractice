@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MYSITE</title>
+        <link rel="icon" href="images/favicon.png">     
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <section>
+            <article>
+                <div id="dialog" title="My Dialog Box">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus totam obcaecati aliquid modi pariatur dolorum libero illum tenetur. Vel velit totam earum odio iure veniam aperiam neque? Tempore, cum debitis.</p> 
+                </div>
+                <button id="showit">Show Dialog</button>
+            </article>
+        </section>
+        <aside>
+            <label for="info"></label><input type="text" id="info" title="This input type is used for university students">
+        </aside>
+        <footer>
+            
+        </footer>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+            
+        });
+
+        $(document).ready(function(){
+            $("#dialog").hide();
+            $("#showit").click(function(){
+                $("#dialog").dialog();
+            });
+            $("#age").tooltip();
+        });
+    </script>
+</html>
